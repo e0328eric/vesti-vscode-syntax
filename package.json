@@ -1,0 +1,25 @@
+{
+    "name": "vesti",
+    "displayName": "vesti",
+    "description": "A preprocessor that compiles into LaTeX",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "vesti",
+            "aliases": ["vesti", "vesti"],
+            "extensions": [".ves"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "vesti",
+            "scopeName": "source.ves",
+            "path": "./syntaxes/vesti.tmLanguage.json"
+        }]
+    }
+}

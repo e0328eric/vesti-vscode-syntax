@@ -1,0 +1,252 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "vesti",
+  "patterns": [
+    {
+      "include": "#key-symbols"
+    },
+    {
+      "include": "#raw-latex"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "begin": "(docclass)[ \\t]+([a-zA-Z]+)[ \\t]*\\(",
+      "end": "\\)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#class-package-options"
+        }
+      ]
+    },
+    {
+      "match": "(docclass)[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
+      "begin": "(import)(?:[ \\t]+((?:[a-zA-Z0-9]|-)+))[ \\t]*\\(",
+      "end": "\\)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#class-package-options"
+        }
+      ]
+    },
+    {
+      "match": "(import)(?:[ \\t]+((?:[a-zA-Z0-9]|-)+))",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
+      "begin": "(import)[\\s\\n]*\\{",
+      "end": "\\}",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#latex-packages"
+        }
+      ]
+    },
+    {
+      "match": "(begenv)[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "begin": "\\$",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.latex"
+        }
+      },
+      "end": "\\$",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.latex"
+        }
+      },
+      "name": "meta.math.block.latex support.class.math.block.environment.latex",
+      "patterns": [
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+
+    {
+      "begin": "\\\\\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.vesti"
+        }
+      },
+      "end": "\\\\\\)",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.vesti"
+        }
+      },
+      "name": "meta.math.block.vesti support.class.math.block.environment.vesti",
+      "patterns": [
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "begin": "\\\\\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.vesti"
+        }
+      },
+      "end": "\\\\\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.vesti"
+        }
+      },
+      "name": "meta.math.block.vesti support.class.math.block.environment.vesti",
+      "patterns": [
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
+      "include": "#latex-functions"
+    }
+  ],
+  "repository": {
+    "raw-latex": {
+      "patterns": [
+        {
+          "name": "constant.string.vesti",
+          "begin": "#-",
+          "end": "-#"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.vesti",
+          "begin": "#\\*",
+          "end": "\\*#"
+        },
+        {
+          "name": "comment.line.vesti",
+          "begin": "#",
+          "end": "\\n"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.vesti",
+          "match": "\\b(startdoc|endenv|mtxt|etxt)\\b"
+        }
+      ]
+    },
+    "key-symbols": {
+      "patterns": [
+        {
+          "name": "constant.language.vesti",
+          "match": "(#!|@!|\\$!)"
+        }
+      ]
+    },
+    "latex-packages": {
+      "patterns": [
+        {
+          "begin": "\\s*((?:[a-zA-Z0-9]|-)+)\\s*\\(",
+          "end": "\\)",
+          "beginCaptures": {
+            "1": {
+              "name": "support.class.vesti"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#class-package-options"
+            }
+          ]
+        },
+        {
+          "match": "\\s*((?:[a-zA-Z0-9]|-)+)\\s*",
+          "name": "support.class.vesti"
+        }
+      ]
+    },
+    "class-package-options": {
+      "patterns": [
+        {
+          "match": "\b(.*)\b",
+          "name": "variable.parameter.function.vesti"
+        }
+      ]
+    },
+    "latex-functions": {
+      "patterns": [
+        {
+          "match": "\\\\[a-zA-Z]+",
+          "name": "support.function.be.vesti"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ves"
+}
