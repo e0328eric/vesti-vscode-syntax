@@ -6,6 +6,9 @@
       "include": "#key-symbols"
     },
     {
+      "include": "#backslashed-symbols"
+    },
+    {
       "include": "#raw-latex"
     },
     {
@@ -176,6 +179,14 @@
           "name": "constant.string.vesti",
           "begin": "#-",
           "end": "-#"
+        }
+      ]
+    },
+    "backslashed-symbols": {
+      "patterns": [
+        {
+          "name": "support.function.be.vesti",
+          "match": "(\\\\\\$|\\\\#|\\\\&|\\\\@)"
         }
       ]
     },
