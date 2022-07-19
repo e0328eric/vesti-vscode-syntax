@@ -1,46 +1,47 @@
 {
-	"name": "vesti",
-	"displayName": "vesti",
-	"description": "A preprocessor that compiles into LaTeX",
-	"repository": "https://github.com/e0328eric/vesti-vscode-syntax",
-	"publisher": "vesti-publisher",
-	"icon": "icon.png",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.66.0"
-	},
-	"categories": [
-		"Programming Languages"
-	],
-	"contributes": {
-		"languages": [
-			{
-				"id": "vesti",
-				"aliases": [
-					"vesti",
-					"vesti"
-				],
-				"extensions": [
-					".ves"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "vesti",
-				"scopeName": "source.ves",
-				"path": "./syntaxes/vesti.tmLanguage.json"
-			}
-		]
-	},
-	"__metadata": {
-		"id": "3fccf158-69e5-4f40-88bf-2f1848bc2479",
-		"publisherDisplayName": "vesti-publisher",
-		"publisherId": "b480592e-874e-4861-a93b-6a4d33524391",
-		"isPreReleaseVersion": false,
-		"targetPlatform": "undefined",
-		"updated": false,
-		"preRelease": false
-	}
+  "name": "vesti",
+  "displayName": "vesti",
+  "description": "A preprocessor that compiles into LaTeX",
+  "repository": "https://github.com/e0328eric/vesti-vscode-syntax",
+  "publisher": "vesti-publisher",
+  "icon": "icon.png",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.66.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "vesti",
+        "aliases": [
+          "vesti",
+          "vesti"
+        ],
+        "extensions": [
+          ".ves"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vesti",
+        "scopeName": "source.ves",
+        "path": "./syntaxes/vesti.tmLanguage.json"
+      }
+    ]
+  },
+  "__metadata": {
+    "id": "3fccf158-69e5-4f40-88bf-2f1848bc2479",
+    "publisherDisplayName": "vesti-publisher",
+    "publisherId": "b480592e-874e-4861-a93b-6a4d33524391",
+    "isPreReleaseVersion": false,
+    "targetPlatform": "undefined",
+    "updated": false,
+    "preRelease": false
+  }
 }
+
