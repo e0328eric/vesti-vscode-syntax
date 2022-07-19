@@ -177,8 +177,8 @@
       "patterns": [
         {
           "name": "constant.string.vesti",
-          "begin": "#-",
-          "end": "-#"
+          "begin": "%-",
+          "end": "-%"
         }
       ]
     },
@@ -186,7 +186,7 @@
       "patterns": [
         {
           "name": "support.function.be.vesti",
-          "match": "(\\\\\\$|\\\\#|\\\\&|\\\\@)"
+          "match": "(\\\\\\$|\\\\#|\\\\&|\\\\@|\\\\%)"
         }
       ]
     },
@@ -194,12 +194,12 @@
       "patterns": [
         {
           "name": "comment.block.vesti",
-          "begin": "#\\*",
-          "end": "\\*#"
+          "begin": "%\\*",
+          "end": "\\*%"
         },
         {
           "name": "comment.line.vesti",
-          "begin": "#",
+          "begin": "%",
           "end": "\\n"
         }
       ]
@@ -216,7 +216,7 @@
       "patterns": [
         {
           "name": "constant.language.vesti",
-          "match": "(#!|@!|\\$!)"
+          "match": "(#!|@!|\\$!|%!)"
         }
       ]
     },
