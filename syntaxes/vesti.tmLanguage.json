@@ -96,6 +96,17 @@
       }
     },
     {
+      "match": "([egx]?l?o?defun)[ \\t]+([a-zA-Z@]+)[ \\t]+((.*))",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
       "include": "#keywords"
     },
     {
@@ -208,7 +219,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass)\\b"
+          "match": "\\b(startdoc|endenv|endfun|mtxt|etxt|docstartmode|nondocclass)\\b"
         }
       ]
     },
