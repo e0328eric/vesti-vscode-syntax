@@ -96,7 +96,7 @@
       }
     },
     {
-      "match": "([egx]?l?o?defun)[ \\t]+([a-zA-Z@]+)[ \\t]+((.*))",
+      "match": "(l?o?[egx]?defun)[ \\t]+([a-zA-Z@]+)[ \\t]+((.*))",
       "captures": {
         "1": {
           "name": "keyword.control.vesti"
