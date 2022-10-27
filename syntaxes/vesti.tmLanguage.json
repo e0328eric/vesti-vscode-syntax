@@ -227,7 +227,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass)\\b"
+          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass|nonstopmode)\\b"
         }
       ]
     },
