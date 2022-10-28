@@ -12,6 +12,9 @@
       "include": "#raw-latex"
     },
     {
+      "include": "#optional-brace"
+    },
+    {
       "include": "#comments"
     },
     {
@@ -198,6 +201,15 @@
           "name": "constant.string.vesti",
           "begin": "%-",
           "end": "-%"
+        }
+      ]
+    },
+    "optional-brace": {
+      "patterns": [
+        {
+          "name": "constant.string.vesti",
+          "begin": "%\\[",
+          "end": "\\]"
         }
       ]
     },
