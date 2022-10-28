@@ -110,14 +110,6 @@
       }
     },
     {
-      "match": "(endfun\\*?)",
-      "captures": {
-        "1": {
-          "name": "keyword.control.vesti"
-        }
-      }
-    },
-    {
       "include": "#keywords"
     },
     {
@@ -207,7 +199,7 @@
     "optional-brace": {
       "patterns": [
         {
-          "name": "constant.string.vesti",
+          "name": "other.vesti",
           "begin": "%\\[",
           "end": "\\]"
         }
@@ -239,7 +231,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass|nonstopmode)\\b"
+          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass|nonstopmode|endfun|endfun\\*)\\b"
         }
       ]
     },
