@@ -99,6 +99,28 @@
       }
     },
     {
+      "match": "(pbegenv)[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
+      "match": "(pendenv)[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
       "match": "(l?o?[egx]?defun\\*?)[ \\t]+([a-zA-Z@]+)[ \\t]*((.*))",
       "captures": {
         "1": {
@@ -231,7 +253,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass|nonstopmode|endfun|endfun\\*)\\b"
+          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass|nonstopmode|endfun|endfun\\*|endswith)\\b"
         }
       ]
     },
