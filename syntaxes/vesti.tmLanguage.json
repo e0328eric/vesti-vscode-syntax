@@ -99,6 +99,17 @@
       }
     },
     {
+      "match": "(useenv)[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
       "match": "(pbegenv)[ \\t]+([a-zA-Z]+)",
       "captures": {
         "1": {
@@ -157,7 +168,29 @@
         }
       ]
     },
-
+    {
+      "begin": "{{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.latex"
+        }
+      },
+      "end": "}}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.latex"
+        }
+      },
+      "name": "meta.math.block.latex support.class.math.block.environment.latex",
+      "patterns": [
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
     {
       "begin": "\\\\\\(",
       "beginCaptures": {
