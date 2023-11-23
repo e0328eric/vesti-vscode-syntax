@@ -46,7 +46,7 @@
       }
     },
     {
-      "begin": "(import)(?:[ \\t]+((?:[a-zA-Z0-9]|-)+))[ \\t]*\\(",
+      "begin": "(importpkg)(?:[ \\t]+((?:[a-zA-Z0-9]|-)+))[ \\t]*\\(",
       "end": "\\)",
       "captures": {
         "1": {
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "match": "(import)(?:[ \\t]+((?:[a-zA-Z0-9]|-)+))",
+      "match": "(importpkg)(?:[ \\t]+((?:[a-zA-Z0-9]|-)+))",
       "captures": {
         "1": {
           "name": "keyword.control.vesti"
@@ -74,7 +74,7 @@
       }
     },
     {
-      "begin": "(import)[\\s\\n]*\\{",
+      "begin": "(importpkg)[\\s\\n]*\\{",
       "end": "\\}",
       "beginCaptures": {
         "1": {
@@ -88,17 +88,6 @@
       ]
     },
     {
-      "match": "(begenv)[ \\t]+([a-zA-Z]+)",
-      "captures": {
-        "1": {
-          "name": "keyword.control.vesti"
-        },
-        "2": {
-          "name": "support.class.vesti"
-        }
-      }
-    },
-    {
       "match": "(useenv)[ \\t]+([a-zA-Z]+)",
       "captures": {
         "1": {
@@ -110,7 +99,7 @@
       }
     },
     {
-      "match": "(pbegenv)[ \\t]+([a-zA-Z]+)",
+      "match": "(defenv)[ \\t]+([a-zA-Z]+)",
       "captures": {
         "1": {
           "name": "keyword.control.vesti"
@@ -121,7 +110,29 @@
       }
     },
     {
-      "match": "(pendenv)[ \\t]+([a-zA-Z]+)",
+      "match": "(redefenv)[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
+      "match": "(begenv)[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
+      "match": "(endenv)[ \\t]+([a-zA-Z]+)",
       "captures": {
         "1": {
           "name": "keyword.control.vesti"
@@ -263,7 +274,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|endenv|mtxt|etxt|docstartmode|nondocclass|nonstopmode|endfun|endswith)\\b"
+          "match": "\\b(startdoc|mainvesfile|importves|importfile|docstartmode|enddef|endswith|nonstopmode)\\b"
         }
       ]
     },
