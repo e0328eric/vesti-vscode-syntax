@@ -274,7 +274,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|mainvesfile|importves|importfile|docstartmode|enddef|endswith|nonstopmode|importlex3|makeatletter|makeatother|ltx3on|ltx3off)\\b"
+          "match": "\\b(startdoc|mainvesfile|importves|importfile|docstartmode|enddef|endswith|nonstopmode|importltx3|makeatletter|makeatother|ltx3on|ltx3off)\\b"
         }
       ]
     },
