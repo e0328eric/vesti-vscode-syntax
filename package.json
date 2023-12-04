@@ -5,7 +5,7 @@
   "repository": "https://github.com/e0328eric/vesti-vscode-syntax",
   "publisher": "vesti-publisher",
   "icon": "icon.png",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "engines": {
     "vscode": "^1.66.0"
   },
