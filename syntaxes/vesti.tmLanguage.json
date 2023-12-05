@@ -203,6 +203,29 @@
       ]
     },
     {
+      "begin": "\\\\\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.vesti"
+        }
+      },
+      "end": "\\\\\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.vesti"
+        }
+      },
+      "name": "meta.math.block.vesti support.class.math.block.environment.vesti",
+      "patterns": [
+        {
+          "include": "text.tex#math"
+        },
+        {
+          "include": "$base"
+        }
+      ]
+    },
+    {
       "include": "#latex-functions"
     }
   ],
