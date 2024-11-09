@@ -239,6 +239,15 @@
         }
       ]
     },
+    "raw-latex-line": {
+      "patterns": [
+        {
+          "name": "constant.string.vesti",
+          "begin": "%-#",
+          "end": "\\n"
+        }
+      ]
+    },
     "optional-brace": {
       "patterns": [
         {
@@ -274,7 +283,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|mainvesfile|importves|importfile|docstartmode|enddef|endswith|nonstopmode|importltx3|makeatletter|makeatother|ltx3on|ltx3off)\\b"
+          "match": "\\b(startdoc|mainvesfile|importves|importmod|importfile|getfilepath|docstartmode|enddef|endswith|nonstopmode|importltx3|makeatletter|makeatother|ltx3on|ltx3off)\\b"
         }
       ]
     },
