@@ -230,19 +230,15 @@
     }
   ],
   "repository": {
-    "raw-latex-line": {
+    "raw-latex": {
       "patterns": [
         {
           "name": "constant.string.vesti",
           "begin": "%-#",
           "end": "\\n"
-        }
-      ]
-    },
-    "raw-latex": {
-      "patterns": [
+        },
         {
-          "name": "constant.string.vesti",
+          "name": "constant.string.block.vesti",
           "begin": "%-",
           "end": "-%"
         }
