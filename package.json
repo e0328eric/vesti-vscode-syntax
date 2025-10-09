@@ -7,7 +7,7 @@
   "icon": "icon.png",
   "version": "0.20.2",
   "engines": {
-    "vscode": "^1.66.0"
+    "vscode": "^1.90.0"
   },
   "categories": [
     "Programming Languages"
@@ -17,27 +17,108 @@
       {
         "id": "vesti",
         "aliases": [
-          "vesti",
+          "Vesti",
           "vesti"
         ],
         "extensions": [
-          ".ves"
-        ],
-        "configuration": "./language-configuration.json"
+          ".ves",
+          ".vesti"
+        ]
       }
     ],
-    "grammars": [
+    "semanticTokenTypes": [
       {
-        "language": "vesti",
-        "scopeName": "source.ves",
-        "path": "./syntaxes/vesti.tmLanguage.json"
+        "id": "namespace"
+      },
+      {
+        "id": "class"
+      },
+      {
+        "id": "enum"
+      },
+      {
+        "id": "function"
+      },
+      {
+        "id": "method"
+      },
+      {
+        "id": "property"
+      },
+      {
+        "id": "variable"
+      },
+      {
+        "id": "parameter"
+      },
+      {
+        "id": "string"
+      },
+      {
+        "id": "number"
+      },
+      {
+        "id": "regexp"
+      },
+      {
+        "id": "operator"
+      },
+      {
+        "id": "keyword"
+      },
+      {
+        "id": "comment"
+      },
+      {
+        "id": "type"
+      },
+      {
+        "id": "macro"
+      },
+      {
+        "id": "constant"
+      },
+      {
+        "id": "punctuation"
+      },
+      {
+        "id": "tag"
+      },
+      {
+        "id": "attribute"
       }
+    ],
+    "semanticTokenModifiers": [
+      "declaration",
+      "definition",
+      "readonly",
+      "static",
+      "documentation",
+      "defaultLibrary",
+      "abstract",
+      "async",
+      "mutable",
+      "modification"
     ]
+  },
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.6.0",
+    "esbuild": "^0.21.0"
+  },
+  "dependencies": {
+    "web-tree-sitter": "^0.24.5"
   },
   "__metadata": {
     "id": "3fccf158-69e5-4f40-88bf-2f1848bc2479",
     "publisherDisplayName": "vesti-publisher",
-    "publisherId": "b480592e-874e-4861-a93b-6a4d33524391",
+    "publisherId": "vesti-publisher",
     "isPreReleaseVersion": false,
     "targetPlatform": "undefined",
     "updated": false,
