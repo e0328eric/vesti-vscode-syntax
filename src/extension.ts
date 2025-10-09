@@ -1,6 +1,4 @@
 import * as vscode from 'vscode';
-import * as path from 'path';
-import * as fs from 'fs/promises';
 import Parser from 'web-tree-sitter';
 
 // Tiny helper to read a file from extension assets
