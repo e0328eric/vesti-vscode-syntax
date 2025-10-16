@@ -5,9 +5,9 @@
   "repository": "https://github.com/e0328eric/vesti-vscode-syntax",
   "publisher": "vesti-publisher",
   "icon": "icon.png",
-  "version": "0.30.0",
+  "version": "1.0.0",
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.66.0"
   },
   "categories": [
     "Programming Languages"
@@ -17,104 +17,22 @@
       {
         "id": "vesti",
         "aliases": [
-          "Vesti",
+          "vesti",
           "vesti"
         ],
         "extensions": [
-          ".ves",
-          ".vesti"
-        ]
+          ".ves"
+        ],
+        "configuration": "./language-configuration.json"
       }
     ],
-    "semanticTokenTypes": [
+    "grammars": [
       {
-        "id": "namespace"
-      },
-      {
-        "id": "class"
-      },
-      {
-        "id": "enum"
-      },
-      {
-        "id": "function"
-      },
-      {
-        "id": "method"
-      },
-      {
-        "id": "property"
-      },
-      {
-        "id": "variable"
-      },
-      {
-        "id": "parameter"
-      },
-      {
-        "id": "string"
-      },
-      {
-        "id": "number"
-      },
-      {
-        "id": "regexp"
-      },
-      {
-        "id": "operator"
-      },
-      {
-        "id": "keyword"
-      },
-      {
-        "id": "comment"
-      },
-      {
-        "id": "type"
-      },
-      {
-        "id": "macro"
-      },
-      {
-        "id": "constant"
-      },
-      {
-        "id": "punctuation"
-      },
-      {
-        "id": "tag"
-      },
-      {
-        "id": "attribute"
+        "language": "vesti",
+        "scopeName": "source.ves",
+        "path": "./syntaxes/vesti.tmLanguage.json"
       }
-    ],
-    "semanticTokenModifiers": [
-      "declaration",
-      "definition",
-      "readonly",
-      "static",
-      "documentation",
-      "defaultLibrary",
-      "abstract",
-      "async",
-      "mutable",
-      "modification"
     ]
-  },
-  "main": "./out/extension.js",
-  "scripts": {
-    "compile": "tsc -p .",
-    "watch": "tsc -w -p .",
-    "vscode:prepublish": "npm run compile"
-  },
-  "devDependencies": {
-    "@types/node": "^24.7.0",
-    "@types/vscode": "^1.90.0",
-    "esbuild": "^0.21.0",
-    "typescript": "^5.6.0"
-  },
-  "dependencies": {
-    "web-tree-sitter": "^0.24.5"
   },
   "__metadata": {
     "id": "3fccf158-69e5-4f40-88bf-2f1848bc2479",
