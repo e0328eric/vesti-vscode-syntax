@@ -2,21 +2,14 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "vesti",
   "patterns": [
-    {
-      "include": "#key-symbols"
-    },
-    {
-      "include": "#backslashed-symbols"
-    },
-    {
-      "include": "#raw-latex"
-    },
-    {
-      "include": "#optional-brace"
-    },
-    {
-      "include": "#comments"
-    },
+    { "include": "#key-symbols" },
+    { "include": "#backslashed-symbols" },
+    { "include": "#raw-latex" },
+    { "include": "#optional-brace" },
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#latex-functions" },
+    { "include": "#builtin-functions" },
     {
       "begin": "(docclass)[ \\t]+([a-zA-Z]+)[ \\t]*\\(",
       "end": "\\)",
@@ -99,6 +92,20 @@
       }
     },
     {
+      "match": "(defun)[ \\t]+(\\[[rReElLoOgG<>]+\\])[ \\t]+([a-zA-Z]+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.vesti"
+        },
+        "2": {
+          "name": "entity.name.type.vesti"
+        },
+        "3": {
+          "name": "support.class.vesti"
+        }
+      }
+    },
+    {
       "match": "(defenv)[ \\t]+([a-zA-Z]+)",
       "captures": {
         "1": {
@@ -110,7 +117,7 @@
       }
     },
     {
-      "match": "(begenv)[ \\t]+(\\[[rReElLoOgG<>]\\])([a-zA-Z]+)",
+      "match": "(begenv)[ \\t]+([a-zA-Z]+)",
       "captures": {
         "1": {
           "name": "keyword.control.vesti"
@@ -130,9 +137,6 @@
           "name": "support.class.vesti"
         }
       }
-    },
-    {
-      "include": "#keywords"
     },
     {
       "begin": "\\$",
@@ -204,7 +208,17 @@
       ]
     },
     {
-      "include": "#latex-functions"
+      "name": "embedded.julia.block",
+      "begin": "(#jl:)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.section.embedded.begin.vesti" }
+      },
+      "end": "(:jl#)",
+      "endCaptures": {
+        "1": { "name": "punctuation.section.embedded.end.vesti" }
+      },
+      "contentName": "source.julia",
+      "patterns": [{ "include": "source.julia" }]
     }
   ],
   "repository": {
@@ -257,7 +271,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|cpfile|compty)\\b"
+          "match": "\\b(startdoc|cpfile|compty|importmod|importves)\\b"
         }
       ]
     },
