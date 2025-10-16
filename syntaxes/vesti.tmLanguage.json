@@ -110,18 +110,7 @@
       }
     },
     {
-      "match": "(redefenv)[ \\t]+([a-zA-Z]+)",
-      "captures": {
-        "1": {
-          "name": "keyword.control.vesti"
-        },
-        "2": {
-          "name": "support.class.vesti"
-        }
-      }
-    },
-    {
-      "match": "(begenv)[ \\t]+([a-zA-Z]+)",
+      "match": "(begenv)[ \\t]+(\\[[rReElLoOgG<>]\\])([a-zA-Z]+)",
       "captures": {
         "1": {
           "name": "keyword.control.vesti"
@@ -133,17 +122,6 @@
     },
     {
       "match": "(endenv)[ \\t]+([a-zA-Z]+)",
-      "captures": {
-        "1": {
-          "name": "keyword.control.vesti"
-        },
-        "2": {
-          "name": "support.class.vesti"
-        }
-      }
-    },
-    {
-      "match": "(l?o?[egx]?defun\\*?)[ \\t]+([a-zA-Z_]+)",
       "captures": {
         "1": {
           "name": "keyword.control.vesti"
@@ -279,7 +257,7 @@
       "patterns": [
         {
           "name": "keyword.control.vesti",
-          "match": "\\b(startdoc|mainvesfile|importves|importmod|importfile|getfilepath|docstartmode|enddef|endswith|nonstopmode|importltx3|makeatletter|makeatother|ltx3on|ltx3off)\\b"
+          "match": "\\b(startdoc|cpfile|compty)\\b"
         }
       ]
     },
@@ -326,6 +304,14 @@
         {
           "match": "\\\\[a-zA-Z]+",
           "name": "support.function.be.vesti"
+        }
+      ]
+    },
+    "builtin-functions": {
+      "patterns": [
+        {
+          "match": "#[0-9a-zA-Z]+",
+          "name": "keyword.control.vesti"
         }
       ]
     }
